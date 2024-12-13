@@ -7,6 +7,7 @@ import {
   formatLargeNonMonetaryNumber,
   formatRatio,
 } from "../../Helpers/NumberFormatting";
+import Spinner from "../Spinner/Spinner";
 
 interface Props {}
 
@@ -99,7 +100,7 @@ const CompanyProfile = (props: Props) => {
           <RatioList data={companyData} config={tableConfig} />{" "}
         </>
       ) : (
-        <>Loading.. </>
+        <Spinner />
       )}
     </>
   );
